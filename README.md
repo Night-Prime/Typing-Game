@@ -1,5 +1,7 @@
 # App
 
+Unable to finish this project due to a missing dependency deleted by its author.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
 
 ## Development server

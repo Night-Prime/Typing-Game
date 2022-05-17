@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import faker from '@faker-js/faker';
+
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  randomText = faker.lorem.sentence();
+  enteredText = '';
+
+  onInput(value: string) {
+    this.enteredText = value;
+  }
+
+  compare(randomLetter: string, enteredLetter: string) {
+    if(!enteredLetter) {
+      return 'pending';
+    }
+    return randomLetter === enteredLetter ? 'correct' : 'incorrect';
+  }
+
+  onChange(changeText: string) {
+    window.location.reload()
+  }
 }
